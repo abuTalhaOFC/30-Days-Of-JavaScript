@@ -64,6 +64,12 @@ for (let y=0 ;y<=100;y++){
 }
 //09.Use for loop to iterate from 0 to 100 and print only prime numbers
 
+for(y=2;y<=100;y++){
+    if(y%){
+
+    }
+}
+
 //10.Use for loop to iterate from 0 to 100 and print the sum of all numbers.
 let sum1 = 0;
 for(let k=0; k<=100;k++){
@@ -72,3 +78,66 @@ for(let k=0; k<=100;k++){
 }
 console.log(`${sum1} is sum of all numbers`)
 //11.Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+let sumOfEv = 0;
+let sumOfOdd = 0;
+for(let t = 0; t <=100; t++){
+    if(t%2==0){
+        sumOfEv += t
+    }
+}
+for(let v = 0; v <=100; v++){
+    if(v%2!=0){
+        sumOfOdd += v
+    }
+}
+console.log(`sum of ev = ${sumOfEv} AND sum of odd = ${sumOfOdd}`)
+//12.Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
+let sumEvAndOddArr = [];
+let sE =0;
+let sO = 0;
+
+for(let u = 0; u<=100; u++){
+    if(u%2==0){
+       sE += u
+    }else{
+        sO += u
+    }
+}
+sumEvAndOddArr.push(`sum or ev is ${sE}`)
+sumEvAndOddArr.push(`sum or odd is ${sO}`)
+console.log(sumEvAndOddArr)
+
+//13.Develop a small script which generate array of 5 random numbers
+let p = 5;
+let rendomnumbersArr =[];
+
+while(p>0){
+    rendomnumbersArr.push(Math.floor((Math.random() * 10) )) 
+    p--
+}
+console.log(rendomnumbersArr)
+//14.Develop a small script which generate array of 5 random numbers and the numbers must be unique
+let unqRendomNumArr = [];
+let kk=5
+while(unqRendomNumArr.length<5){
+    let rnum = Math.floor((Math.random() * 10) )
+    
+        if(unqRendomNumArr.indexOf(rnum)==-1){
+            unqRendomNumArr.push(rnum)
+        }
+    kk--
+    
+    
+}
+
+console.log(unqRendomNumArr)
+//15.Develop a small script which generate a six characters random id:5j2khz
+    const idArr = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H']
+    let unqId = ''
+for (let o = 0; o < 5 ;o++){
+    let rm = Math.floor((Math.random() * 17) )
+    unqId += idArr[rm]
+}
+
+console.log(unqId)
+
